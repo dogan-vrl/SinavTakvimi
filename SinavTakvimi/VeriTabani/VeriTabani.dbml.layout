@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.875, 8.5" name="VeriTabani">
+  <DataContextMoniker Name="/VeriTabaniDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9be0875b-d4d5-44e1-8420-aeb5e79f8a05" absoluteBounds="8.125, 3.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/VeriTabaniDataContext/Asistanlar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9fa29624-da09-442b-a79c-2ab234543268" absoluteBounds="8.14, 3.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="518ef968-5809-4490-8372-7f0f0af450d4" absoluteBounds="0.5, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/VeriTabaniDataContext/Admin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="50ff6d7f-4e99-470e-9233-fe56bc8e38ce" absoluteBounds="0.51500000000000057, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4e059cc7-48fb-43a0-b659-402cf64225fa" absoluteBounds="5.625, 3.125, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/VeriTabaniDataContext/Bolumler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d51c5448-bb00-440f-b584-ea887d02b388" absoluteBounds="5.64, 3.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5c667319-02db-4d8d-8e39-807f22c1cc76" absoluteBounds="0.75, 3, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/VeriTabaniDataContext/Dersler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d711085-2c47-4730-bace-65701ee1a8f5" absoluteBounds="0.76500000000000012, 3.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a3dff59d-0953-42e4-9610-e413b14073b3" absoluteBounds="3.875, 0.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/VeriTabaniDataContext/Derslikler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fd534738-0db4-4aa6-a208-a01b0bb6714b" absoluteBounds="3.8899999999999997, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4e189c0d-252b-4be5-97be-b7702518b9f9" absoluteBounds="10.625, 3.125, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/VeriTabaniDataContext/Izinler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f6c8337e-440a-440c-9855-ce8c7180ad78" absoluteBounds="10.64, 3.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="398bad91-770c-4c24-b43c-014e68ae7934" absoluteBounds="7, 0.5, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/VeriTabaniDataContext/Sekreterler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="10dc53f3-4097-4173-9404-20c401eacd77" absoluteBounds="7.0150000000000006, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="692e4037-7ffa-4c6c-8598-97878e73b71d" absoluteBounds="3.75, 5.125, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/VeriTabaniDataContext/Sinavlar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d6b9af8d-b397-4dca-81fc-f510439a82d3" absoluteBounds="3.7650000000000006, 5.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

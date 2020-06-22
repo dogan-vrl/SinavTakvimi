@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="doganvar_veritabani" Class="VeriTabaniDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=mssql07.turhost.com;Initial Catalog=doganvar_veritabani;User ID=doganDB" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="doganvar_veritabaniConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Asistanlar" Member="Asistanlar">
+    <Type Name="Asistanlar">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BolumId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Adi" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Soyadi" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Cinsiyeti" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Admin" Member="Admin">
+    <Type Name="Admin">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Adi" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Soyad" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="KullaniciAdi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sifre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bolumler" Member="Bolumler">
+    <Type Name="Bolumler">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BolumKod" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BolumAdi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Dersler" Member="Dersler">
+    <Type Name="Dersler">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BolumId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DersKodu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DersAdi" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DersiAlanOgrenciSayisi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EngelliDurumu" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DersinHocasi" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Derslikler" Member="Derslikler">
+    <Type Name="Derslikler">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BolumId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DerslikKod" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DerslikAdi" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DerslikKapasitesi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DerslikKat" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Aciklama" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Izinler" Member="Izinler">
+    <Type Name="Izinler">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AsistanId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IzinAdi" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="IzinAciklama" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IzinBasSaati" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="IzinBitisSaati" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="IzınBasTarihi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IzinBitisTarihi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sekreterler" Member="Sekreterler">
+    <Type Name="Sekreterler">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BolumId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Adi" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Soyadi" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="KullaniciAdi" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Sifre" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sinavlar" Member="Sinavlar">
+    <Type Name="Sinavlar">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BolumId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DersId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DerslikId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AsistanId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tarih" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="BaslangicSaati" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="BitisSaati" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

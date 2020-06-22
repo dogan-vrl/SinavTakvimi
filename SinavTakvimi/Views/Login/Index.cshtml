@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Giriş Ekranı</title>
+    <link href="~/Assets/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Assets/LoginStyle.css" rel="stylesheet" />
+    <link rel="icon" href="~/Assets/image/uniLogoTR.png">
+</head>
+<body class="login-body">
+    <header>
+
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-3"></div>
+                <div class="col-md-4 col-sm-6">
+                    
+                    <form class="login-form" action="/Login/Index" method="post">
+                        <img class="img-responsive" src="~/Assets/image/uniLogoTR.png" />
+                        <input class="form-control" type="text" name="KullaniciAdi" placeholder="Kullanıcı Adı" />
+                        <input class="form-control" type="password" name="Sifre" placeholder="Şifre" />
+                        <button class="btn btn-primary form-control" type="submit">Giriş</button>
+                    </form>
+                </div>
+                <div class="col-md-4 col-sm-3"></div>
+            </div>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>

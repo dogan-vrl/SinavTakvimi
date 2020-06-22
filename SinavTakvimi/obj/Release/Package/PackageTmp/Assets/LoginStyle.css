@@ -1,0 +1,21 @@
+﻿body {
+    min-height: 100vh;
+}
+
+.login-body {
+    background: linear-gradient(#005f96,#00a1ff);
+    height:100%;
+}
+
+.login-form {
+    border-radius:5px;
+    margin-top:80px;
+    background-color: #F7F7FC;
+    padding:20px;
+}
+.login-form img{
+    padding: 0 40px 20px 40px;
+}
+    .login-form input {
+        margin-bottom: 10px;
+    }

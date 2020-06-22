@@ -1,0 +1,115 @@
+﻿@using SinavTakvimi.VeriTabani
+@model  Sinavlar
+@{
+    ViewBag.Title = "Sınav Düzenle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h3>
+                                Sınav Düzenle
+                            </h3>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="/Sinav/Index" class="btn btn-warning ekle-btn">Geri <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12  col-md-12 col-lg-6 col-sm-12">
+        <div class="card-box">
+            <form class="duzenle-form" action="/Sinav/Duzenle" method="post">
+                <input class="hidden" type="text" name="Id" value="@Model.Id" />
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label>Bolümü</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-control" name="BolumId">
+                            @foreach (var item in (List<Bolumler>)ViewBag.Bolumler)
+                            {
+                                <option @(item.Id == Model.BolumId ? "selected" : "") value="@item.Id">@item.BolumAdi</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label>Ders</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-control" name="DersId">
+                            @foreach (var item in (List<Dersler>)ViewBag.Dersler)
+                            {
+                                <option @(item.Id == Model.DersId ? "selected" : "") value="@item.Id">@item.DersAdi (@item.DersiAlanOgrenciSayisi)</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label>Derslik</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-control" name="DerslikId">
+                            @foreach (var item in (List<Derslikler>)ViewBag.Derslikler)
+                            {
+                                <option @(item.Id == Model.DerslikId ? "selected" : "") value="@item.Id">@item.DerslikAdi (@item.DerslikKapasitesi)</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label>Asistanlar</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-control" name="AsistanId">
+                            @foreach (var item in (List<Asistanlar>)ViewBag.Asistanlar)
+                            {
+                                <option @(item.Id == int.Parse(Model.AsistanId) ? "selected" : "") value="@item.Id">@item.Adi @item.Soyadi</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label>Tarih</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input class="form-control" type="date" name="Tarih" value="@Model.Tarih.Value.ToString("yyyy-MM-dd")" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label>Sinav Saati</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-control" name="BaslangicSaati">
+                            <option @(TimeSpan.Parse("08:30") == Model.BaslangicSaati ? "selected" : "") value="08:30">08:30-10:00</option>
+                            <option @(TimeSpan.Parse("10:30") == Model.BaslangicSaati ? "selected" : "") value="10:30">10:30-12:00</option>
+                            <option @(TimeSpan.Parse("13:00") == Model.BaslangicSaati ? "selected" : "") value="13:00">13:00-14:30</option>
+                            <option @(TimeSpan.Parse("15:00") == Model.BaslangicSaati ? "selected" : "") value="15:00">15:00-16:30</option>
+                            <option @(TimeSpan.Parse("17:00") == Model.BaslangicSaati ? "selected" : "") value="17:00">17:00-18:30</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button class="form-control btn btn-primary" type="submit">Kaydet</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

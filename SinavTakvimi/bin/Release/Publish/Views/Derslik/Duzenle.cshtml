@@ -1,0 +1,94 @@
+﻿@using SinavTakvimi.VeriTabani
+@model Derslikler
+@{
+    ViewBag.Title = "Derslik Düzenle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h3>
+                                Derslik Düzenle
+                            </h3>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="/Derslik/Index" class="btn btn-warning ekle-btn">Geri <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12  col-md-12 col-lg-6 col-sm-12">
+        <div class="card-box">
+            <form class="duzenle-form" action="/Derslik/Duzenle" method="post">
+                <input class="hidden" type="text" name="Id" value="@Model.Id" required />
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label>Adı</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input class="form-control" type="text" name="DerslikAdi" value="@Model.DerslikAdi" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label>Kodu</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input class="form-control" type="text" name="DerslikKod" value="@Model.DerslikKod" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label>Derslik Kapasitesi</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input class="form-control" type="number" name="DerslikKapasitesi" value="@Model.DerslikKapasitesi" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label>Açıklama</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input class="form-control" type="text" name="Aciklama" value="@Model.Aciklama" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label>Bölümü</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-control" name="BolumId">
+                            @foreach (var item in (List<Bolumler>)ViewBag.Bolumler)
+                            {
+                                <option @(item.Id == Model.BolumId ? "selected" : "") value="@item.Id">@item.BolumAdi</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label>Derslik Kat</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input class="form-control" type="number" name="DerslikKat" value="@Model.DerslikKat" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button class="form-control btn btn-primary" type="submit">Düzenle</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,82 @@
+﻿@using SinavTakvimi.Models
+@model List<SinavModel>
+@{
+    ViewBag.Title = "Sınav Takvimi Düzenle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="form-group mb-3">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h3>
+                                Sınavlar
+                            </h3>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="/Sinav/Ekle" class="btn btn-primary ekle-btn">Yeni <i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12  col-md-12 col-lg-12 col-sm-12">
+        <div class="card-box">
+            @if (Model.Count() > 0)
+            {
+                <div class="table-div">
+                    <table id="demo-custom-toolbar" class="table table-striped table-bordered dt-responsive nowrap display" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Tarih</th>
+                                <th>Saat</th>
+                                <th>Ders</th>
+                                <th>Derslik</th>
+                                <th>Bölüm</th>
+                                <th>Asistanlar</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Tarih.Value.ToString("d MMMM yyyy")</td>
+                                    <td>@item.BaslangicSaati</td>
+                                    <td>@item.Ders</td>
+                                    <td>@item.Derslik</td>
+                                    <td>@item.BolumAdi</td>
+                                    <td>@item.Asistanlar</td>
+                                    <td class="pt-8">
+                                        <ul class="list-inline">
+                                            <li>
+                                                <a class="btn btn-primary edit-btn" href="/Sinav/Duzenle/@item.Id">
+                                                    <i class="fa fa-edit"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="btn btn-danger" href="/Sinav/Sil/@item.Id">
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <p>Sınav Yok!</p>
+            }
+        </div>
+    </div>
+</div>
